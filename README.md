@@ -76,7 +76,7 @@ Next, activate the venv and run `dbt init`. The goal is to ensure that the depen
 
 We select BigQuery as the database to be used. Also, choose [2] service_account as the authentication method, input the GCP project ID, dataset, threads, and location. Then, enter the 'taxi' project folder, run 'dbt debug', and make sure all checks have passed.
 
-![dbt-debug](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/dbt-debug.png)
+![dbt-debug](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/dbt-debug-weekly.png)
 
 Move the CSV dataset file into the taxi\seeds folder. Then, run 'dbt seed'. The function of 'dbt seed' is to load initial data or seed data into a database table. Make sure that in the BigQuery dataset 'weekly_assignment', the table 'taxi' already exists.
 
