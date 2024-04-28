@@ -84,10 +84,60 @@ Move the CSV dataset file into the taxi\seeds folder. Then, run 'dbt seed'. The 
 
 ![taxi-table](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/taxi-table.png)
 
+### Create dbt Models
+#### Monthly Total Passengers
+![passengers]()
+From the table, we can observe data representing the monthly passenger count from 2008 to 2021. Here are some insights that can be derived:
 
+1. **Passengers per Month**: The table illustrates the monthly count of passengers from 2008 to 2021. It shows that the number of passengers varies from month to month and from year to year.
+2. **Growth Trends**: The data indicates growth trends in passenger numbers from 2008 to 2021. It's noticeable that the number of passengers tends to increase over the years, with the highest surge occurring in July 2021.
+3. **Upward Trend**: Despite normal monthly fluctuations, there's a general upward trend in passenger numbers over time. The significant increase in July 2021 might be attributed to seasonal factors or specific events affecting transportation demand.
+4. **Potential for Further Analysis**: This data can be used for further analysis, such as identifying factors influencing passenger demand, predicting future trends, and developing more effective marketing or operational strategies to optimize fleet utilization.
 
+#### Monthly Transactions per Payment Type
+![transactions]()
+From the provided table, we can derive the following insights:
 
+1. **Payment Type Distribution**: The data showcases the distribution of payment types utilized for taxi trips over different months and years. The predominant payment types are Cash and Credit Card, with occasional occurrences of Dispute, No Charge, and Unknown.
+2. **Variability in Transaction Amounts**: The monthly transaction amounts vary significantly across payment types and time periods. For instance, in July 2021, the transaction amounts for Cash and Credit Card payments are substantially higher compared to other months, indicating a potential surge in taxi usage during that period.
+3. **Prevalence of Electronic Payments**: Credit Card payments appear to be more prevalent in recent years, as indicated by the higher transaction amounts compared to Cash payments in 2021. This trend may suggest a shift towards electronic payment methods among taxi passengers.
+4. **Anomalies**: There are instances of Dispute, No Charge, and Unknown payment types, which may represent exceptional cases or errors in the payment processing system. Further investigation may be required to understand the nature of these transactions and their impact on overall revenue and operations.
+5. **Seasonal Variations**: The data reflects seasonal variations in taxi transactions, with higher transaction amounts observed during certain months (e.g., July 2021). These fluctuations could be influenced by factors such as tourism, events, or changes in consumer behavior.
+Overall, this data provides valuable insights into the payment behavior of taxi passengers over time, highlighting trends, anomalies, and potential areas for further analysis and optimization.
 
+#### Monthly Trip Distance per Rate Code
+![distance]()
+Based on the provided data, the following insights can be derived:
+
+1. Variation in Trip Types: The data reveals different types of trip rates, including Standard Rate, Negotiated Fare, JFK, Nassau or Westchester, and Newark. Each rate code corresponds to specific trip categories, such as standard city trips, negotiated fares, trips to airports (JFK and Newark), and trips to nearby counties (Nassau or Westchester).
+2. Trip Distance Distribution: The monthly trip distance varies across different rate codes and time periods. For instance, in July 2021, trips under the Standard Rate exhibit significantly higher distances compared to other rate codes, indicating a higher frequency of longer trips during that month.
+3. Seasonal Trends: There are fluctuations in trip distances over time, with variations observed across different months and years. For example, in June 2021, the trip distance for Negotiated Fare is recorded as 0.0, suggesting a potential anomaly or a change in trip patterns during that period.
+4. Airport Trips: Trips to airports (JFK and Newark) tend to have longer distances compared to standard city trips, as evidenced by the higher trip distances recorded for these rate codes. This could be attributed to the distance between city locations and airport terminals.
+5. Operational Insights: The data provides insights into the operational aspects of taxi services, such as the distribution of trip types, the variability in trip distances, and the impact of factors like negotiated fares on overall trip metrics. Understanding these patterns can help optimize service operations, route planning, and resource allocation.
+
+### Extra per Trip Type
+"Miscellaneous extras and surcharges" refers to additional fees that may be applied on top of the base fare in a transaction or payment. In this context, it specifically mentions the $0.50 and $1 charges for rush hour and overnight services.
+
+![extra]()
+Here are some insights from the data above:
+
+1. Monthly additional charges imposed by VeriFone Inc and Creative Mobile Technologies, LLC vary from month to month, with the highest peak occurring in July 2021.
+2. The majority of trips do not use the Store and Forward Trip method, except in July 2021, where Creative Mobile Technologies, LLC has some trips using this method.
+3. The trend of additional charges seems to increase from year to year, especially in July 2021.
+4. Additional charges imposed by VeriFone Inc tend to be more varied compared to Creative Mobile Technologies, LLC.
+5. In August 2021, the amount of additional charges imposed by VeriFone Inc is lower compared to previous months.
+
+### Congestion Surcharge per Rate Code
+![surcharge]()
+Here are some insights derived from the table:
+
+1. The "Standard Rate" has the highest congestion surcharge compared to other rate codes, indicating that trips under this rate are subject to significant congestion fees.
+2. Trips to or from JFK airport have a moderate congestion surcharge, suggesting that travel to and from airports may incur additional charges due to congestion.
+3. The "Negotiated Fare" rate code has a notably high congestion surcharge, indicating that negotiated fares may include surcharges for congestion.
+4. The absence of a congestion surcharge for trips to Newark suggests that this area may not experience significant congestion-related costs.
+5. The "Nassau or Westchester" rate code has a lower congestion surcharge compared to the "Standard Rate," indicating that trips to these areas may involve less congestion or shorter distances.
+6. 
+These insights provide valuable information about the distribution of congestion surcharges across different rate codes, helping to understand the cost implications of taxi trips in various locations and under different fare structures.
 
 
 
