@@ -62,5 +62,19 @@ But what about yellow cabs? The same 5-mile, 10-minute trip going 25 miles per h
 
 In this example, the cost of each ride is close. Which option is cheaper in other scenarios depends on traffic. When Sara Silverstein did the math for Business Insider, she found that taxis are cheaper in New York City when traffic is flowing at under 20 MPH. Uber is cheaper in other cases unless it is charging high-demand fares.
 
+## Load and Transform Raw data
+### Data Ingestion from CSV to BigQuery
+First, let's create a dataset and a table to store the raw data. We'll name the dataset "weekly_assignment" and the table "taxi". When creating the table, also upload the raw CSV data that we'll be using.
+
+https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/create-dataset.png
+
+https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/create-table.png
+
+
+
+
+
+
+
 
 
