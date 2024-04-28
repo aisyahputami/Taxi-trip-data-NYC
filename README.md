@@ -59,7 +59,7 @@ Based on the provided data, the following insights can be derived:
 4. Airport Trips: Trips to airports (JFK and Newark) tend to have longer distances compared to standard city trips, as evidenced by the higher trip distances recorded for these rate codes. This could be attributed to the distance between city locations and airport terminals.
 5. Operational Insights: The data provides insights into the operational aspects of taxi services, such as the distribution of trip types, the variability in trip distances, and the impact of factors like negotiated fares on overall trip metrics. Understanding these patterns can help optimize service operations, route planning, and resource allocation.
 
-### Extra per Trip Type
+#### Extra per Trip Type
 "Miscellaneous extras and surcharges" refers to additional fees that may be applied on top of the base fare in a transaction or payment. In this context, it specifically mentions the $0.50 and $1 charges for rush hour and overnight services.
 
 ![extra]()
@@ -71,7 +71,7 @@ Here are some insights from the data above:
 4. Additional charges imposed by VeriFone Inc tend to be more varied compared to Creative Mobile Technologies, LLC.
 5. In August 2021, the amount of additional charges imposed by VeriFone Inc is lower compared to previous months.
 
-### Congestion Surcharge per Rate Code
+#### Congestion Surcharge per Rate Code
 ![surcharge]()
 Here are some insights derived from the table:
 
