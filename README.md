@@ -67,12 +67,23 @@ In this example, the cost of each ride is close. Which option is cheaper in othe
 First, let's create a virtual environment in the project folder.
 ![venv](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/create-venv.png)
 
-Then, let's create a dataset. We'll name the dataset "weekly_assignment".
+Then, let's create a dataset. We'll name the dataset 'weekly_assignment'.
 ![dataset](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/create-dataset.png)
 
-Next, activate the venv and run `dbt init`. The goal is to ensure that the dependencies and Python packages needed by our dbt project are well isolated from the global Python environment, while `dbt init` sets up the basic structure of the required project.
+Next, activate the venv and run `dbt init`. The goal is to ensure that the dependencies and Python packages needed by our dbt project are well isolated from the global Python environment, while `dbt init` sets up the basic structure of the required project. Name our project 'taxi'.
 
 ![dbt-init](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/activate-vevn-dbt-init.png)
+
+We select BigQuery as the database to be used. Also, choose [2] service_account as the authentication method, input the GCP project ID, dataset, threads, and location. Then, enter the 'taxi' project folder, run 'dbt debug', and make sure all checks have passed.
+
+![dbt-debug](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/dbt-debug.png)
+
+Move the CSV dataset file into the taxi\seeds folder. Then, run 'dbt seed'. The function of 'dbt seed' is to load initial data or seed data into a database table. Make sure that in the BigQuery dataset 'weekly_assignment', the table 'taxi' already exists.
+
+![dbt-seed](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/dbt-seed.png)
+
+![bq-taxi-table](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/bq-taxi-table.png)
+
 
 
 
