@@ -80,7 +80,7 @@ Here are some insights derived from the table:
 3. The "Negotiated Fare" rate code has a notably high congestion surcharge, indicating that negotiated fares may include surcharges for congestion.
 4. The absence of a congestion surcharge for trips to Newark suggests that this area may not experience significant congestion-related costs.
 5. The "Nassau or Westchester" rate code has a lower congestion surcharge compared to the "Standard Rate," indicating that trips to these areas may involve less congestion or shorter distances.
-6. 
+
 These insights provide valuable information about the distribution of congestion surcharges across different rate codes, helping to understand the cost implications of taxi trips in various locations and under different fare structures.
 
 
