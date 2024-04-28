@@ -66,9 +66,11 @@ In this example, the cost of each ride is close. Which option is cheaper in othe
 ### Data Ingestion from CSV to BigQuery
 First, let's create a dataset and a table to store the raw data. We'll name the dataset "weekly_assignment" and the table "taxi". When creating the table, also upload the raw CSV data that we'll be using.
 
-https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/create-dataset.png
+![dataset](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/create-dataset.png)
 
-https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/create-table.png
+![table](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/create-table.png)
+
+
 
 
 
