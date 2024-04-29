@@ -104,7 +104,7 @@ These insights provide valuable information about the distribution of congestion
 
 ### dbt Test
 ### dbt Test Raw Data
-dbt testing is performed on raw data with the goal of validating that the values in each column meet the expected criteria, ensuring that the models built from this raw data will be accurate. Testing includes checks for Null values, Data Types, and accepted value ranges.
+First, create a source and model file for raw data. dbt testing is performed on raw data with the goal of validating that the values in each column meet the expected criteria, ensuring that the models built from this raw data will be accurate. Testing includes checks for Null values, Data Types, and accepted value ranges.
 
 You can view the code for dbt testing on raw data at this [link]()
 
