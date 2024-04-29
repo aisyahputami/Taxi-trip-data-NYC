@@ -219,6 +219,24 @@ Based on the DBT test model "congestion_surcharge_per_rate_code" above, the foll
     - accepted_range Test: Ensures that every value in the "congestion_surcharge" column is within the minimum range of 0 (cannot be negative).
     - expect_column_values_to_be_of_type Test: Ensures that all values in the "congestion_surcharge" column have the data type float64.
 
+## Macros in dbt
+#### Trip Duration
+Let's try to calculate trip duration using macros in dbt. First, create a new file with the extension '.sql' in the macros directory within our dbt project.
+
+![macros](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/macros/macros_trip_duration.png)
+
+Lalu, kita akan menghitung nilai trip duration berdasarkan selisih dari lpep_dropoff_datetime dan lpep_pickup_datetime. Kita buat model dari trip duration dan gunakan perhitungan dari file macros yang telah dibuat sebelumnya.
+
+![model](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/macros/trip_duration_model.png)
+
+Berikut merupakan output dari perhitungan trip duration.
+
+![dbt_run](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/macros/dbt_run_trip_duration.png)
+
+![bq](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/macros/bq_trip_duration.png)
+
+
+
 
 
 
