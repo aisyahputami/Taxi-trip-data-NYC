@@ -210,11 +210,11 @@ Based on the DBT test model "extra_per_trip_type" above, the following insights 
 
 Based on the DBT test model "congestion_surcharge_per_rate_code" above, the following insights can be derived:
 
-1. Column "ratecode":
+1. **Column "ratecode"**:
     - not_null Test: Ensures that every value in the "ratecode" column is not null.
     - accepted_values Test: Ensures that every value in the "ratecode" column can only be one of the specified rate codes: 'Standard Rate', 'JFK', 'Newark', 'Nassau or Westchester', 'Negotiated Fare', 'Group Ride'.
     - expect_column_values_to_be_of_type Test: Ensures that all values in the "ratecode" column have the data type string.
-2. Column "congestion_surcharge":
+2. **Column "congestion_surcharge"**:
     - not_null Test: Ensures that every value in the "congestion_surcharge" column is not null.
     - accepted_range Test: Ensures that every value in the "congestion_surcharge" column is within the minimum range of 0 (cannot be negative).
     - expect_column_values_to_be_of_type Test: Ensures that all values in the "congestion_surcharge" column have the data type float64.
