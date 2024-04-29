@@ -68,11 +68,11 @@ Overall, this data provides valuable insights into the payment behavior of taxi 
 
 Based on the provided data, the following insights can be derived:
 
-1. Variation in Trip Types: The data reveals different types of trip rates, including Standard Rate, Negotiated Fare, JFK, Nassau or Westchester, and Newark. Each rate code corresponds to specific trip categories, such as standard city trips, negotiated fares, trips to airports (JFK and Newark), and trips to nearby counties (Nassau or Westchester).
-2. Trip Distance Distribution: The monthly trip distance varies across different rate codes and time periods. For instance, in July 2021, trips under the Standard Rate exhibit significantly higher distances compared to other rate codes, indicating a higher frequency of longer trips during that month.
-3. Seasonal Trends: There are fluctuations in trip distances over time, with variations observed across different months and years. For example, in June 2021, the trip distance for Negotiated Fare is recorded as 0.0, suggesting a potential anomaly or a change in trip patterns during that period.
-4. Airport Trips: Trips to airports (JFK and Newark) tend to have longer distances compared to standard city trips, as evidenced by the higher trip distances recorded for these rate codes. This could be attributed to the distance between city locations and airport terminals.
-5. Operational Insights: The data provides insights into the operational aspects of taxi services, such as the distribution of trip types, the variability in trip distances, and the impact of factors like negotiated fares on overall trip metrics. Understanding these patterns can help optimize service operations, route planning, and resource allocation.
+1. **Variation in Trip Types**: The data reveals different types of trip rates, including Standard Rate, Negotiated Fare, JFK, Nassau or Westchester, and Newark. Each rate code corresponds to specific trip categories, such as standard city trips, negotiated fares, trips to airports (JFK and Newark), and trips to nearby counties (Nassau or Westchester).
+2. **Trip Distance Distributio**n: The monthly trip distance varies across different rate codes and time periods. For instance, in July 2021, trips under the Standard Rate exhibit significantly higher distances compared to other rate codes, indicating a higher frequency of longer trips during that month.
+3. **Seasonal Trends**: There are fluctuations in trip distances over time, with variations observed across different months and years. For example, in June 2021, the trip distance for Negotiated Fare is recorded as 0.0, suggesting a potential anomaly or a change in trip patterns during that period.
+4. **Airport Trip**s: Trips to airports (JFK and Newark) tend to have longer distances compared to standard city trips, as evidenced by the higher trip distances recorded for these rate codes. This could be attributed to the distance between city locations and airport terminals.
+5. **Operational Insights**: The data provides insights into the operational aspects of taxi services, such as the distribution of trip types, the variability in trip distances, and the impact of factors like negotiated fares on overall trip metrics. Understanding these patterns can help optimize service operations, route planning, and resource allocation.
 
 #### Extra per Trip Type
 "Miscellaneous extras and surcharges" refers to additional fees that may be applied on top of the base fare in a transaction or payment. In this context, it specifically mentions the $0.50 and $1 charges for rush hour and overnight services.
@@ -134,22 +134,22 @@ Thus, the purpose of the dbt test model is to validate the consistency and accur
 
 Based on the dbt test model transactions_per_payment_type above, the following insights can be derived:
 
-1. Column "year":
+1. **Column "year"**:
    There are three types of tests conducted on the "year" column:
     - not_null test: Ensures that every value in the "year" column is not null.
     - dbt_utils.accepted_range test: Ensures that every value in the "year" column is within the minimum accepted range of 0 (not negative).
     - dbt_expectations.expect_column_values_to_be_of_type test: Ensures that all values in the "year" column have a data type of int64.
-2. Column "month_name":
+2. **Column "month_name**":
    There are three types of tests conducted on the "month_name" column:
     - not_null test: Ensures that every value in the "month_name" column is not null.
     - accepted_values test: Ensures that every value in the "month_name" column is one of the months from January to December.
     - dbt_expectations.expect_column_values_to_be_of_type test: Ensures that all values in the "month_name" column have a data type of string.
-3. Column "monthly_transactions":
+3. **Column "monthly_transactions"**:
     There are three types of tests conducted on the "monthly_transactions" column:
     - not_null test: Ensures that every value in the "monthly_transactions" column is not null.
     - dbt_utils.accepted_range test: Ensures that every value in the "monthly_transactions" column is within the minimum accepted range of 0 (not negative).
     - dbt_expectations.expect_column_values_to_be_of_type test: Ensures that all values in the "monthly_transactions" column have a data type of float64.
-4. Column "payment_type":
+4. **Column "payment_type"**:
     There are three types of tests conducted on the "payment_type" column:
     - not_null test: Ensures that every value in the "payment_type" column is not null.
     - accepted_values test: Ensures that every value in the "payment_type" column is one of the specified payment types: Credit Card, Cash, No Charge, Dispute, Unknown, Voided trip.
@@ -157,7 +157,27 @@ Based on the dbt test model transactions_per_payment_type above, the following i
 
 These tests aim to validate the consistency and accuracy of data that will be used in the analysis based on the "year", "month_name", "monthly_transactions", and "payment_type" columns.
 
+#### dbt Test Monthly Trip Distance per Rate Code
+![distance](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/dbt-test/dbt-test-trip-distance-per-rate.png)
 
+Based on the DBT test model "trip-distance-per-rate-code" above, the following insights can be derived:
+
+1. **Column "year"**:
+    - not_null Test: Ensures that every value in the "year" column is not null.
+    - accepted_range Test: Ensures that every value in the "year" column is within the minimum range of 0 (cannot be negative).
+    - expect_column_values_to_be_of_type Test: Ensures that all values in the "year" column have the data type int64.
+2. **Column "month_name"**:
+    - not_null Test: Ensures that every value in the "month_name" column is not null.
+    - accepted_values Test: Ensures that every value in the "month_name" column can only be one of the months from January to December.
+    - expect_column_values_to_be_of_type Test: Ensures that all values in the "month_name" column have the data type string.
+3. **Column "monthly_trip_distance"**:
+    - not_null Test: Ensures that every value in the "monthly_trip_distance" column is not null.
+    - accepted_range Test: Ensures that every value in the "monthly_trip_distance" column is within the minimum range of 0 (cannot be negative).
+    - expect_column_values_to_be_of_type Test: Ensures that all values in the "monthly_trip_distance" column have the data type float64.
+4. **Column "ratecode"**:
+    - not_null Test: Ensures that every value in the "ratecode" column is not null.
+    - accepted_values Test: Ensures that every value in the "ratecode" column can only be one of the specified rate codes: 'Standard Rate', 'JFK', 'Newark', 'Nassau or Westchester', 'Negotiated Fare', 'Group Ride'.
+    - expect_column_values_to_be_of_type Test: Ensures that all values in the "ratecode" column have the data type string.
 
 
 
