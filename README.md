@@ -129,7 +129,33 @@ Based on the dbt test model above, the following insights are obtained:
 
 Thus, the purpose of the dbt test model is to validate the consistency and accuracy of the data to be used in the analysis based on the "year", "month_name", and "monthly_passengers" columns.
 
+#### dbt Test Monthly Transactions per Payment Type
+![transactions](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/dbt-test/dbt_test_monthly_transactions.png)
 
+Based on the dbt test model transactions_per_payment_type above, the following insights can be derived:
+
+1. Column "year":
+   There are three types of tests conducted on the "year" column:
+    - not_null test: Ensures that every value in the "year" column is not null.
+    - dbt_utils.accepted_range test: Ensures that every value in the "year" column is within the minimum accepted range of 0 (not negative).
+    - dbt_expectations.expect_column_values_to_be_of_type test: Ensures that all values in the "year" column have a data type of int64.
+2. Column "month_name":
+   There are three types of tests conducted on the "month_name" column:
+    - not_null test: Ensures that every value in the "month_name" column is not null.
+    - accepted_values test: Ensures that every value in the "month_name" column is one of the months from January to December.
+    - dbt_expectations.expect_column_values_to_be_of_type test: Ensures that all values in the "month_name" column have a data type of string.
+3. Column "monthly_transactions":
+    There are three types of tests conducted on the "monthly_transactions" column:
+    - not_null test: Ensures that every value in the "monthly_transactions" column is not null.
+    - dbt_utils.accepted_range test: Ensures that every value in the "monthly_transactions" column is within the minimum accepted range of 0 (not negative).
+    - dbt_expectations.expect_column_values_to_be_of_type test: Ensures that all values in the "monthly_transactions" column have a data type of float64.
+4. Column "payment_type":
+    There are three types of tests conducted on the "payment_type" column:
+    - not_null test: Ensures that every value in the "payment_type" column is not null.
+    - accepted_values test: Ensures that every value in the "payment_type" column is one of the specified payment types: Credit Card, Cash, No Charge, Dispute, Unknown, Voided trip.
+    - dbt_expectations.expect_column_values_to_be_of_type test: Ensures that all values in the "payment_type" column have a data type of string.
+
+These tests aim to validate the consistency and accuracy of data that will be used in the analysis based on the "year", "month_name", "monthly_transactions", and "payment_type" columns.
 
 
 
