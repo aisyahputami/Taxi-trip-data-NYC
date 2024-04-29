@@ -37,6 +37,7 @@ In this case, we are tasked with developing 5 models. Among them, 3 are mandator
 ![terminal](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/models/monthly_total_passengers.png)
 
 ![passengers](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/models/bq_monthly_total_passengers.png)
+
 From the table, we can observe data representing the monthly passenger count from 2008 to 2021. Here are some insights that can be derived:
 
 1. **Passengers per Month**: The table illustrates the monthly count of passengers from 2008 to 2021. It shows that the number of passengers varies from month to month and from year to year.
@@ -45,7 +46,10 @@ From the table, we can observe data representing the monthly passenger count fro
 4. **Potential for Further Analysis**: This data can be used for further analysis, such as identifying factors influencing passenger demand, predicting future trends, and developing more effective marketing or operational strategies to optimize fleet utilization.
 
 #### Monthly Transactions per Payment Type
-![transactions]()
+![terminal](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/models/transactions_per_payment_type.png)
+
+![transactions](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/models/bq_transactions_per_payment_type.png)
+
 From the provided table, we can derive the following insights:
 
 1. **Payment Type Distribution**: The data showcases the distribution of payment types utilized for taxi trips over different months and years. The predominant payment types are Cash and Credit Card, with occasional occurrences of Dispute, No Charge, and Unknown.
@@ -56,7 +60,10 @@ From the provided table, we can derive the following insights:
 Overall, this data provides valuable insights into the payment behavior of taxi passengers over time, highlighting trends, anomalies, and potential areas for further analysis and optimization.
 
 #### Monthly Trip Distance per Rate Code
-![distance]()
+![terminal](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/models/trip-distance-per-rate-code.png)
+
+![distance](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/models/bq-trip-distance-per-rate-code.png)
+
 Based on the provided data, the following insights can be derived:
 
 1. Variation in Trip Types: The data reveals different types of trip rates, including Standard Rate, Negotiated Fare, JFK, Nassau or Westchester, and Newark. Each rate code corresponds to specific trip categories, such as standard city trips, negotiated fares, trips to airports (JFK and Newark), and trips to nearby counties (Nassau or Westchester).
@@ -68,7 +75,9 @@ Based on the provided data, the following insights can be derived:
 #### Extra per Trip Type
 "Miscellaneous extras and surcharges" refers to additional fees that may be applied on top of the base fare in a transaction or payment. In this context, it specifically mentions the $0.50 and $1 charges for rush hour and overnight services.
 
-![extra]()
+![terminal](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/models/extra_per_trip_type.png)
+
+![extra](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/models/bq_extra_per_trip_type.png)
 Here are some insights from the data above:
 
 1. Monthly additional charges imposed by VeriFone Inc and Creative Mobile Technologies, LLC vary from month to month, with the highest peak occurring in July 2021.
@@ -78,7 +87,9 @@ Here are some insights from the data above:
 5. In August 2021, the amount of additional charges imposed by VeriFone Inc is lower compared to previous months.
 
 #### Congestion Surcharge per Rate Code
-![surcharge]()
+![terminal](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/models/congestion_surcharge_per_rate_code.png)
+
+![surcharge](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/models/bq_congestion_surcharge_per_rate_code.png)
 Here are some insights derived from the table:
 
 1. The "Standard Rate" has the highest congestion surcharge compared to other rate codes, indicating that trips under this rate are subject to significant congestion fees.
