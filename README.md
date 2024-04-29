@@ -9,6 +9,7 @@ The business team has provided a data project focusing on analyzing the NYC Taxi
 ## Load and Transform Raw data
 ### Data Ingestion from CSV to BigQuery
 First, let's create a virtual environment in the project folder.
+
 ![venv](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/create-venv.png)
 
 Then, let's create a dataset. We'll name the dataset 'weekly'.
