@@ -78,6 +78,7 @@ Based on the provided data, the following insights can be derived:
 ![terminal](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/models/extra_per_trip_type.png)
 
 ![extra](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/models/bq_extra_per_trip_type.png)
+
 Here are some insights from the data above:
 
 1. Monthly additional charges imposed by VeriFone Inc and Creative Mobile Technologies, LLC vary from month to month, with the highest peak occurring in July 2021.
@@ -90,6 +91,7 @@ Here are some insights from the data above:
 ![terminal](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/models/congestion_surcharge_per_rate_code.png)
 
 ![surcharge](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/models/bq_congestion_surcharge_per_rate_code.png)
+
 Here are some insights derived from the table:
 
 1. The "Standard Rate" has the highest congestion surcharge compared to other rate codes, indicating that trips under this rate are subject to significant congestion fees.
