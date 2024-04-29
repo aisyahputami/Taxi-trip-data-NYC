@@ -109,6 +109,27 @@ First, create a [source]() and [model]() file for raw data. dbt testing is perfo
 You can view the code for dbt testing on raw data at this [link]()
 
 #### dbt Test Monthly Total Passengers
+![passengers](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/dbt-test/dbt_test_monthly_total_passengers.png)
+
+Based on the dbt test model above, the following insights are obtained:
+1. "year" Column: There are three types of tests performed on the "year" column:
+    - not_null Test: Ensures that every value in the "year" column must not be null.
+    - accepted_range Test: Ensures that every value in the "year" column must be within the minimum range of 0 (cannot be negative).
+    - expect_column_values_to_be_of_type Test: Ensures that all values in the "year" column have the data type int64.
+2. "month_name" Column: There are three types of tests performed on the "month_name" column:
+    - not_null Test: Ensures that every value in the "month_name" column must not be null.
+    - accepted_values Test: Ensures that every value in the "month_name" column can only be a month from January to December.
+    - expect_column_values_to_be_of_type Test: Ensures that all values in the "month_name" column have the data type string.
+3. "monthly_passengers" Column: There are three types of tests performed on the "monthly_passengers" column:
+    - not_null Test: Ensures that every value in the "monthly_passengers" column must not be null.
+    - accepted_range Test: Ensures that every value in the "monthly_passengers" column must be within the minimum range of 0 (cannot be negative).
+    - expect_column_values_to_be_of_type Test: Ensures that all values in the "monthly_passengers" column have the data type int64.
+
+Thus, the purpose of the dbt test model is to validate the consistency and accuracy of the data to be used in the analysis based on the "year", "month_name", and "monthly_passengers" columns.
+
+
+
+
 
 
 
