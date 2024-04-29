@@ -30,7 +30,7 @@ Move the CSV dataset file into the taxi\seeds folder. Then, run 'dbt seed'. The 
 
 ![taxi-table](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/taxi-table.png)
 
-### Create dbt Models
+## Create dbt Models
 In this case, we are tasked with developing 5 models. Among them, 3 are mandatory tasks, namely Monthly Total Passengers, Monthly Transactions per Payment Type, and Monthly Trip Distance per Rate Code. Meanwhile, the Extra per Trip Type and Congestion Surcharge per Rate Code models are additional ones.
 
 ![list](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/models/dbt-models.png)
@@ -104,7 +104,7 @@ Here are some insights derived from the table:
 
 These insights provide valuable information about the distribution of congestion surcharges across different rate codes, helping to understand the cost implications of taxi trips in various locations and under different fare structures.
 
-### dbt Test
+## dbt Test
 #### dbt Test Raw Data
 First, create a [source]() and [model]() file for raw data. dbt testing is performed on raw data with the goal of validating that the values in each column meet the expected criteria, ensuring that the models built from this raw data will be accurate. Testing includes checks for Null values, Data Types, and accepted value ranges.
 
