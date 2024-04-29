@@ -179,7 +179,45 @@ Based on the DBT test model "trip-distance-per-rate-code" above, the following i
     - accepted_values Test: Ensures that every value in the "ratecode" column can only be one of the specified rate codes: 'Standard Rate', 'JFK', 'Newark', 'Nassau or Westchester', 'Negotiated Fare', 'Group Ride'.
     - expect_column_values_to_be_of_type Test: Ensures that all values in the "ratecode" column have the data type string.
 
+#### dbt Test Extra per Trip Type
+![extra](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/dbt-test/dbt_test_extra_per_trip_type.png)
 
+Based on the DBT test model "extra_per_trip_type" above, the following insights can be derived:
+
+1. **Column "year"**:
+    - not_null Test: Ensures that every value in the "year" column is not null.
+    - accepted_range Test: Ensures that every value in the "year" column is within the minimum range of 0 (cannot be negative).
+    - expect_column_values_to_be_of_type Test: Ensures that all values in the "year" column have the data type int64.
+2. **Column "month_name"**:
+    - not_null Test: Ensures that every value in the "month_name" column is not null.
+    - accepted_values Test: Ensures that every value in the "month_name" column can only be one of the months from January to December.
+    - expect_column_values_to_be_of_type Test: Ensures that all values in the "month_name" column have the data type string.
+3. **Column "monthly_extra"**:
+    - not_null Test: Ensures that every value in the "monthly_extra" column is not null.
+    - accepted_range Test: Ensures that every value in the "monthly_extra" column is within the minimum range of 0 (cannot be negative).
+    - expect_column_values_to_be_of_type Test: Ensures that all values in the "monthly_extra" column have the data type float64.
+4. **Column "vendor"**:
+    - not_null Test: Ensures that every value in the "vendor" column is not null.
+    - accepted_values Test: Ensures that every value in the "vendor" column can only be one of the specified vendors: 'Creative Mobile Technologies, LLC' or 'VeriFone Inc'.
+    - expect_column_values_to_be_of_type Test: Ensures that all values in the "vendor" column have the data type string.
+5. **Column "trip_type"**:
+    - not_null Test: Ensures that every value in the "trip_type" column is not null.
+    - accepted_values Test: Ensures that every value in the "trip_type" column can only be one of the specified trip types: 'Store and Forward Trip' or 'Not a Store and Forward Trip'.
+    - expect_column_values_to_be_of_type Test: Ensures that all values in the "trip_type" column have the data type string.
+
+#### dbt Test Congestion Surcharge per Rate Code
+![congestion](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/dbt-test/dbt_test_congestion_surcharge_per_rate_code.png)
+
+Based on the DBT test model "congestion_surcharge_per_rate_code" above, the following insights can be derived:
+
+1. Column "ratecode":
+    - not_null Test: Ensures that every value in the "ratecode" column is not null.
+    - accepted_values Test: Ensures that every value in the "ratecode" column can only be one of the specified rate codes: 'Standard Rate', 'JFK', 'Newark', 'Nassau or Westchester', 'Negotiated Fare', 'Group Ride'.
+    - expect_column_values_to_be_of_type Test: Ensures that all values in the "ratecode" column have the data type string.
+2. Column "congestion_surcharge":
+    - not_null Test: Ensures that every value in the "congestion_surcharge" column is not null.
+    - accepted_range Test: Ensures that every value in the "congestion_surcharge" column is within the minimum range of 0 (cannot be negative).
+    - expect_column_values_to_be_of_type Test: Ensures that all values in the "congestion_surcharge" column have the data type float64.
 
 
 
