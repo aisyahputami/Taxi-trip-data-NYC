@@ -22,7 +22,7 @@ We select BigQuery as the database to be used. Also, choose [2] service_account 
 
 ![dbt-debug](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/dbt-debug-weekly.png)
 
-Move the CSV dataset file into the taxi\seeds folder. Then, run 'dbt seed'. The function of 'dbt seed' is to load initial data or seed data into a database table. Make sure that in the BigQuery dataset 'weekly_assignment', the table 'taxi' already exists.
+Move the CSV dataset file into the taxi\seeds folder. Then, run 'dbt seed'. The function of 'dbt seed' is to load initial data or seed data into a database table. Make sure that in the BigQuery dataset 'weekly', the table 'taxi' already exists.
 
 ![dbt-seed](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/dbt-seed-weekly.png)
 
