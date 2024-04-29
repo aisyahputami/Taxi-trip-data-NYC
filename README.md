@@ -225,11 +225,11 @@ Let's try to calculate trip duration using macros in dbt. First, create a new fi
 
 ![macros](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/macros/macros_trip_duration.png)
 
-Lalu, kita akan menghitung nilai trip duration berdasarkan selisih dari lpep_dropoff_datetime dan lpep_pickup_datetime. Kita buat model dari trip duration dan gunakan perhitungan dari file macros yang telah dibuat sebelumnya.
+Then, we will calculate the trip duration value based on the difference between 'lpep_dropoff_datetime' and 'lpep_pickup_datetime'. We create a model for trip duration and utilize the calculation from the previously created macros file.
 
 ![model](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/macros/trip_duration_model.png)
 
-Berikut merupakan output dari perhitungan trip duration.
+Here is the output of the trip duration calculation.
 
 ![dbt_run](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/macros/dbt_run_trip_duration.png)
 
