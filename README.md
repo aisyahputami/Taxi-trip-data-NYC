@@ -34,7 +34,9 @@ In this case, we are tasked with developing 5 models. Among them, 3 are mandator
 ![list](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/models/dbt-models.png)
 
 #### Monthly Total Passengers
-![passengers]()
+![terminal](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/models/monthly_total_passengers.png)
+
+![passengers](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/models/bq_monthly_total_passengers.png)
 From the table, we can observe data representing the monthly passenger count from 2008 to 2021. Here are some insights that can be derived:
 
 1. **Passengers per Month**: The table illustrates the monthly count of passengers from 2008 to 2021. It shows that the number of passengers varies from month to month and from year to year.
