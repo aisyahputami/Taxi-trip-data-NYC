@@ -29,6 +29,10 @@ Move the CSV dataset file into the taxi\seeds folder. Then, run 'dbt seed'. The 
 ![taxi-table](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/taxi-table.png)
 
 ### Create dbt Models
+In this case, we are tasked with developing 5 models. Among them, 3 are mandatory tasks, namely Monthly Total Passengers, Monthly Transactions per Payment Type, and Monthly Trip Distance per Rate Code. Meanwhile, the Extra per Trip Type and Congestion Surcharge per Rate Code models are additional ones.
+
+![list](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/models/dbt-models.png)
+
 #### Monthly Total Passengers
 ![passengers]()
 From the table, we can observe data representing the monthly passenger count from 2008 to 2021. Here are some insights that can be derived:
