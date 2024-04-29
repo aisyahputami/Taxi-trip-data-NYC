@@ -13,6 +13,7 @@ First, let's create a virtual environment in the project folder.
 ![venv](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/create-venv.png)
 
 Then, let's create a dataset. We'll name the dataset 'weekly'.
+
 ![dataset](https://github.com/aisyahputami/Taxi-trip-data-NYC/blob/main/bigquery/create-weekly-dataset.png)
 
 Next, activate the venv and run `dbt init`. The goal is to ensure that the dependencies and Python packages needed by our dbt project are well isolated from the global Python environment, while `dbt init` sets up the basic structure of the required project. Name our project 'taxi'.
